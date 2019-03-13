@@ -1,5 +1,9 @@
+body {
+  background: #fafafa;
+}
+
 /***********************************
-- HEADER  
+- Header  
 ************************************/
 .App-header {
   position: fixed;
@@ -11,7 +15,7 @@
   border-bottom: 1px solid #efefef;
   transition-duration: 0.5s;
   z-index: 10;
-  padding: 1rem;
+  padding: 1rem 1.6rem;
 }
 
 .header-wrap {
@@ -38,7 +42,7 @@
   grid-template-columns: 25px auto;
   align-items: center;
   padding: 0 0.5rem;
-  background: #d5d6d9;
+  background: #f0f0f0;
   border-radius: 4px;
 }
 
@@ -60,4 +64,248 @@
 
 .nav-link {
   color: #838383;
+  border-radius: 4px;
+  transition: all 0.2s;
+}
+
+.active-link {
+  color: #3c3c3c !important;
+}
+
+.nav-link:hover {
+  background: #eaebed;
+}
+
+.page-highlight {
+  background: url(https://beginmate.com/Upload/AD/main_01.jpg) no-repeat;
+  background-size: cover;
+  background-position: center -80px;
+  height: 600px;
+}
+
+/***********************************
+- Notice  
+************************************/
+
+.page-notice {
+  width: 100%;
+  background-color: #ffcc12;
+  height: 84px;
+  padding-top: 15px;
+}
+
+.notice-content {
+  position: relative;
+  width: 95%;
+  display: inline-block;
+  line-height: 1.8;
+}
+
+.page-title {
+  position: absolute;
+  left: 0px;
+  top: 11px;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 900;
+}
+
+.notice-title {
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.notice-subtitle {
+  font-size: 15px;
+  font-weight: 700;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.btn-more {
+  position: absolute;
+  right: 0px;
+  top: 5px;
+  border-radius: 4px;
+  background-color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  width: 110px;
+  height: 37px;
+  line-height: 37px;
+  cursor: pointer;
+}
+
+@media (max-width: 992px) {
+  .page-title,
+  .btn-more {
+    display: none;
+  }
+
+  .notice-title {
+    font-size: 15px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-weight: 700;
+    cursor: pointer;
+  }
+
+  .notice-subtitle {
+    font-size: 13px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-weight: 700;
+    color: #ffffff;
+    cursor: pointer;
+  }
+}
+
+/***********************************
+- Grid  
+************************************/
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  grid-gap: 20px;
+  align-items: stretch;
+}
+
+.grid-item {
+  background-color: #ffffff;
+  box-shadow: 0px 0px 30px #eee;
+  border: 1px solid #cecece;
+  margin-bottom: 20px;
+}
+
+.aspect-ratio {
+  background-color: #f9f9f9;
+  padding-bottom: 66.8%;
+  display: block;
+  margin: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.aspect-ratio img {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  transition-duration: 0.2s;
+}
+
+.item-overlay {
+  opacity: 0;
+  transition-duration: 0.2s;
+  background-color: rgba(0, 0, 0, 0.2);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  text-align: center;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.item-overlay .btn-view {
+  width: 136px;
+  height: 35px;
+  font-size: 13px;
+  font-weight: 500;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 35px;
+  display: inline-block;
+  background: #ffffff;
+  border-radius: 20px;
+  color: #565656;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.5);
+}
+
+.grid-item > a:hover .item-overlay {
+  opacity: 1;
+}
+
+.grid-item a:hover img {
+  transform: scale(1.08, 1.08);
+}
+
+.grid-content {
+  padding: 25px 30px;
+}
+
+.grid-content a {
+  color: #171717;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.grid-header {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 5px;
+}
+
+.grid-header a {
+  font-size: 18px;
+  font-weight: 700;
+  color: #2a2a2a;
+  text-transform: uppercase;
+}
+
+.grid-captions {
+  color: #979797;
+  font-size: 14px;
+}
+
+.grid-captions span {
+  vertical-align: middle;
+}
+
+.grid-captions .user-post {
+  margin-right: 15px;
+  max-width: 55%;
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.grid-captions .icon-views {
+  background-image: url(https://beginmate.com/img/ic_hit.svg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  display: inline-block;
+  width: 20px;
+  height: 14px;
+  margin-right: 8px;
+}
+
+.grid-captions .icon-comments {
+  background-image: url(https://beginmate.com/img/ic_comment.svg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  display: inline-block;
+  width: 16px;
+  height: 14px;
+  margin-top: -2px;
+  margin-left: 10px;
+  margin-right: 6px;
+}
+
+.grid-footer {
+  margin-top: 30px;
+}
+
+.grid-footer .field {
+  font-size: 13px;
 }

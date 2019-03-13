@@ -30,6 +30,10 @@ ol {
   list-style: none;
 }
 
+a {
+  text-decoration: none;
+}
+
 .d-flex {
   display: flex;
 }
@@ -47,5 +51,36 @@ ol {
 }
 
 .container {
+  max-width: 1440px;
   margin: 0 auto;
+  padding: 0 30px;
+}
+
+.container {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.p-wrap {
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+
+.c-content {
+  text-align: center;
+}
+
+.p-section {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.App {
+  padding-top: 81px;
 }
