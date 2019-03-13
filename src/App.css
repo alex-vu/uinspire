@@ -1,33 +1,63 @@
-.App {
-  text-align: center;
+/***********************************
+- HEADER  
+************************************/
+.App-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #ffffff;
+  font-weight: 700;
+  color: #3c3c3c;
+  border-bottom: 1px solid #efefef;
+  transition-duration: 0.5s;
+  z-index: 10;
+  padding: 1rem;
+}
+
+.header-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+  width: 105px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+.App-logo img {
+  width: 90%;
+  vertical-align: bottom;
+}
+
+.search-title {
+  font-size: 20px;
+}
+
+.search-label {
+  display: grid;
+  grid-template-columns: 25px auto;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 0 0.5rem;
+  background: #d5d6d9;
+  border-radius: 4px;
 }
 
-.App-link {
-  color: #61dafb;
+.search-label input {
+  font-weight: 700;
+  background-color: transparent;
+  border: 0;
+  outline: 0;
+  color: #fff;
+  padding: 0.75rem;
+  font-size: 1.3rem;
+  border-radius: 3px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.nav-item,
+.nav-link {
+  padding: 0.5em;
+}
+
+.nav-link {
+  color: #838383;
 }
